@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e9f1f7;
+    color: #333;
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Main container to hold header, main content, and footer */
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Flex-grow to the main content to push footer to the bottom */
+#content {
+    flex-grow: 1;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+header .logo {
+    width: 300px;
+    height: auto;
+}
+
+header .site-title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+header .sub-title {
+    font-size: 1.5rem;
+    color: #514b4b;
+    margin-bottom: 1rem;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+section h2 {
+    color: #0056b3;
+}
+
+/* Gallery Section */
+.gallery-images, .gallery-videos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.gallery-images img, .gallery-videos video {
+    width: 100%;
+    max-width: 300px; /* Ensure a uniform width */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    object-fit: cover; /* Ensure the video fits within the box */
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+#contact label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#contact input, #contact textarea {
+    width: 100%; /* Make inputs take full width of form-group */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact button {
+    width: 100%; /* Make button take full width of form-group */
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 400px; /* Limit the width of the button */
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Social Links */
+.instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.instagram-link span {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        position: static;
+        margin-top: 10px;
+    }
+
+    header .logo {
+        width: 200px;
+    }
+
+    header .site-title {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 0.5rem auto;
+        max-width: 90%;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-images, .gallery-videos {
+        flex-direction: column;
+    }
+
+    .gallery-images img, .gallery-videos video {
+        width: 100%;
+    }
+
+    #contact {
+        padding: 1rem;
+    }
+
+    #contact .form-group {
+        width: 90%;
+    }
+}
+
+#cta {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #fefefe;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #0056b3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: white;
+
+}
+
+.animation-container {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+.drone {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: -200px; /* Start off-screen to the left */
+    width: 100px; /* Adjust size as needed */
+    animation: flyAcross 10s linear infinite;
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -200px; /* Start off-screen to the left */
+    }
+    50% {
+        top: 10%; /* Move slightly up */
+    }
+    100% {
+        left: 100%; /* End off-screen to the right */
+        top: 50%; /* Back to original vertical position */
+    }
+}
