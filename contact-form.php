@@ -18,12 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Your email address where the form data will be sent
-    $to = "sterling.spear74@gmail.com"; 
+    $to = "jerome.sterling@sterflies.com"; 
     $subject = "New Contact Form Submission from SterFlies";
     $body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
 
     // Headers
-    $headers = "From: noreply@yourdomain.com\r\n"; // Use a generic email from your domain to avoid spam filters
+    $headers = "From: noreply@sterflies.com\r\n"; // Use a generic email from your domain to avoid spam filters
     $headers .= "Reply-To: $email\r\n";
 
     // Send email
