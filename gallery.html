@@ -6,6 +6,10 @@
     <title>SterFlies - Professional Drone Operator</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="main-container">
@@ -37,18 +41,25 @@
                 <h2>Gallery</h2>
                 <p>Check out some of our amazing work:</p>
                 <div class="gallery-images">
-                    <img src="DJI_0101.JPG" alt="Tower Inspection"> 
-                    <img src="DJI_0102.JPG" alt="Site Inspection"> 
-                    <img src="DJI_0103.JPG" alt="Drone Image">
+                    <a href="DJI_0101.JPG" data-lightbox="Drone Shots" data-title="Tower Inspection">
+                        <img src="DJI_0101.JPG" alt="Tower Inspection" loading="lazy"> 
+                    </a>
+                    <a href="DJI_0102.JPG" data-lightbox="Drone Shots" data-title="Base-Ball Fields Landscape">
+                        <img src="DJI_0102.JPG" alt="Site Inspection" loading="lazy">
+                    </a>
+                    <a href="DJI_0103.JPG" data-lightbox="Drone Shots" data-title="Checking Environment">
+                        <img src="DJI_0103.JPG" alt="Drone Image" loading="lazy">       
+                    </a>
                 </div>
             </section>
-        </div>
-
-        <footer>
-            <p>&copy; 2024 SterFlies.</p>
-        </footer>
-    </div>
-
-    <script src="scripts.js"></script>
+            
+            <footer>
+                <p>&copy; 2024 SterFlies</p>
+            </footer>
+            
+            <script src="scripts.js"></script>
+            <script src="lightbox-plus-jquery.js"></script>
+            
+    
 </body>
 </html>

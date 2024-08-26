@@ -108,18 +108,36 @@ section h2 {
 /* Gallery Section */
 .gallery-images, .gallery-videos {
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 50px 8%;
     gap: 1rem;
     flex-wrap: wrap; /* Ensure wrapping on smaller screens */
 }
 
 .gallery-images img, .gallery-videos video {
     width: 100%;
-    max-width: 300px; /* Ensure a uniform width */
+    max-width: 300px; 
     height: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
-    object-fit: cover; /* Ensure the video fits within the box */
+    object-fit: auto; 
+}
+
+.lightbox img {
+    max-width: 90%;   /* Maximum width of the image */
+    max-height: 90%;  /* Maximum height of the image */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    margin: auto;     /* Centers the image within its container */
+    display: block;
+}
+
+.lightbox .lb-nav a.lb-prev, 
+.lightbox .lb-nav a.lb-next,
+.lightbox .lb-close {
+    display: block; /* Always display the buttons */
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Contact Section */
