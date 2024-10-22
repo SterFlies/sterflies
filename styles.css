@@ -11,6 +11,14 @@ body {
 
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    padding-bottom: 20px;
 }
 
 /* Main container to hold header, main content, and footer */
@@ -318,4 +326,11 @@ footer {
         left: 100%; /* End off-screen to the right */
         top: 50%; /* Back to original vertical position */
     }
+}
+
+.part107-badge {
+    width: 150px;  
+    height: auto;  
+    margin: 0 auto;  
+    display: block; 
 }
