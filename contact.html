@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    
+    <!-- Mailchimp CSS -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="main-container">
@@ -30,22 +33,23 @@
             <section id="home">
                 <h2>Call Us</h2>
                 <p>Give us a call <a href="tel:+18329187171">+1(832)918-7171</a></p>
-                <p> If we don't answer then leave a message or fill out the information below!</p>
-                <p> We will respond within 24-48 hours</p>
+                <p>If we don't answer, leave a message or fill out the form below!</p>
+                <p>We will respond within 24-48 hours.</p>
             </section>
+
             <div class="instagram-link">
                 <a href="https://www.instagram.com/sterflies" target="_blank">
-                <img src="Instagram.png" alt="Instagram" class="instagram-icon">
+                    <img src="Instagram.png" alt="Instagram" class="instagram-icon">
                 </a>
                 <a href="https://www.linkedin.com/in/jerome-sterling-9777062b9" target="_blank">
                     <img src="LinkedIn-Emblema.png" alt="LinkedIn" style="width: 40px; height: 40px; object-fit: contain;">
                 </a>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61564983811040" target="_blank">
-                <img src="facebook logo.png" alt="Facebook" style="width: 29px; margin-left: 10px;">
-            </a>
+                <a href="https://www.facebook.com/profile.php?id=61564983811040" target="_blank">
+                    <img src="facebook logo.png" alt="Facebook" style="width: 29px; margin-left: 10px;">
+                </a>
             </div>
 
+            <!-- Contact Form Section -->
             <section id="contact">
                 <h2>Contact Us</h2>
                 <form action="https://api.web3forms.com/submit" method="POST">
@@ -70,14 +74,61 @@
                     <button type="submit">Send Message</button>
                 </form>
             </section>
-        </div>
-       
-    </section>
-</div>
 
-<footer>
-    <p>&copy; 2024 SterFlies</p>
-</footer>
-</div>
+            <!-- Mailchimp Signup Section -->
+            <section id="subscribe">
+                <h2>Stay Updated with SterFlies</h2>
+                <p>Sign up to receive updates about our drone services, new projects, and special offers.</p>
+
+                <div id="mc_embed_signup">
+                    <form action="https://sterflies.us9.list-manage.com/subscribe/post?u=014a7cec35ea7dc291dca3434&amp;id=faf43f94da&amp;f_id=009673e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-FNAME">First Name </label>
+                                <input type="text" name="FNAME" id="mce-FNAME">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-LNAME">Last Name </label>
+                                <input type="text" name="LNAME" id="mce-LNAME">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display: none;"></div>
+                                <div class="response" id="mce-success-response" style="display: none;"></div>
+                            </div>
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                <input type="text" name="b_014a7cec35ea7dc291dca3434_faf43f94da" tabindex="-1" value="">
+                            </div>
+                            <div class="clear">
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2024 SterFlies</p>
+        </footer>
+
+    </div>
+
+    <!-- Mailchimp JavaScript -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array(); 
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+            fnames[1] = 'FNAME'; ftypes[1] = 'text';
+            fnames[2] = 'LNAME'; ftypes[2] = 'text';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
 </body>
 </html>
