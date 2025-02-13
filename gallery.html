@@ -3,79 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SterFlies - Professional Drone Operator</title>
+    <title>SterFlies - Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="lightbox.css">
-    <link rel="icon" href="logo.png" type="image/x-icon">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
-    <div id="main-container">
-        <header>
-            <div id="drone-animation">
-                <img src="Drone picture (1).png" alt="Flying Drone" class="drone">
-            </div>
-            <img src="logo.png" alt="SterFlies Logo" class="logo">
-            <h1 class="site-title">SterFlies</h1>
-            <h2 class="sub-title">Professional Drone Operator</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <div id="content">
-            <section id="home">
-                <h2>Welcome to SterFlies</h2>
-                <p> Capturing whatever you need through a birds eye.</p>
-            </section>
 
-            <section id="gallery">
-                <h2>Gallery</h2>
-                <p>Check out some of our most recent missions:</p>
-                <h2>Orthomosaic Maps</h2>
-                <p>An orthomosaic map is a high-resolution, geometrically corrected aerial image made by stitching together multiple overlapping drone photos. Unlike standard aerial images, an orthomosaic is spatially accurate—meaning it has been corrected for distortions caused by terrain, camera angle, and lens curvature.</p>
-                <div class="gallery-images">
-                    <a href="Orthomosaic.png" data-lightbox="Drone Shots" data-title="Construction">
-                        <img src="Orthomosaic.png" alt="Tower Inspection" loading="lazy"> 
-                    </a>
-                    <a href="DJI_0102.JPG" data-lightbox="Drone Shots" data-title="Base-Ball Fields Landscape">
-                        <img src="DJI_0102.JPG" alt="Site Inspection" loading="lazy">
-                    </a>
-                    <a href="Carlos Raygoza.jpg" data-lightbox="Drone Shots" data-title="Survey Mission">
-                        <img src="Carlos Raygoza.jpg" alt="Survey Mission" loading="lazy">
-                        </a>
-                    <a href="Property Map Large.jpeg" data-lightbox="Drone Shots" data-title="36 acre Map">
-                        <img src="Property Map Large.jpeg" alt="36 acres Orthomosaic Map" loading="lazy">       
-                    </a>
+    <header>
+        <img src="logo.png" alt="SterFlies Logo" class="logo">
+        <h1 class="site-title">SterFlies</h1>
+        <h2 class="sub-title">Professional Drone Operator</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Check out some of our most recent drone missions categorized for easy viewing.</p>
+
+            <!-- FILTER BUTTONS -->
+            <div class="filter-buttons">
+                <button class="filter-btn" data-filter="all">Show All</button>
+                <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+                <button class="filter-btn" data-filter="construction">Construction</button>
+                <button class="filter-btn" data-filter="mapping">Mapping</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="inspections">Inspections</button>
+                <button class="filter-btn" data-filter="misc">Miscellaneous</button>
+            </div>
+
+            <!-- IMAGE GALLERY -->
+            <div class="gallery-grid">
+                <a href="Orthomosaic.png" data-lightbox="gallery" data-title="Construction Site" class="gallery-item construction">
+                    <img src="Orthomosaic.png" alt="Construction Site">
+                </a>
+                <a href="DJI_0102.JPG" data-lightbox="gallery" data-title="Baseball Fields - Mapping" class="gallery-item mapping">
+                    <img src="DJI_0102.JPG" alt="Baseball Fields Mapping">
+                </a>
+                <a href="Carlos Raygoza.jpg" data-lightbox="gallery" data-title="Survey Mission" class="gallery-item mapping">
+                    <img src="Carlos Raygoza.jpg" alt="Survey Mission">
+                </a>
+                <a href="Property Map Large.jpeg" data-lightbox="gallery" data-title="36-acre Land Mapping" class="gallery-item mapping">
+                    <img src="Property Map Large.jpeg" alt="36-acre Land Orthomosaic">
+                </a>
+            </div>
+        </section>
+
+        <!-- ROOF INSPECTION SECTION -->
+        <section id="inspection-gallery" class="inspection-gallery">
+            <h2>Roof Inspections</h2>
+            <p>Here is an interactive look at the recent roof inspections, including high-resolution images and report summaries.</p>
+
+            <!-- Inspection Images -->
+            <div class="inspection-images">
+                <a href="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453337/Roof_Inspection_1_z5hxh7.jpg" data-lightbox="inspection" data-title="Roof Inspection Image 1">
+                    <img src="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453337/Roof_Inspection_1_z5hxh7.jpg" alt="Roof Inspection Image">
+                </a>
+                <a href="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453909/RI_2_q2gewm.jpg" data-lightbox="inspection" data-title="Roof Inspection Image 2">
+                    <img src="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453909/RI_2_q2gewm.jpg" alt="Roof Inspection Image">
+                </a>
+                <a href="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453945/RI_3_pfjic8.jpg" data-lightbox="inspection" data-title="Roof Inspection Image 3">
+                    <img src="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453945/RI_3_pfjic8.jpg" alt="Roof Inspection Image">
+                </a>
+                <a href="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453977/RI_4_d8oamt.jpg" data-lightbox="inspection" data-title="Roof Inspection Image 4">
+                    <img src="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739453977/RI_4_d8oamt.jpg" alt="Roof Inspection Image">
+                </a>
+                <a href="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739454401/RI_5_tbi2b2.jpg" data-lightbox="inspection" data-title="Roof Inspection Image 5">
+                    <img src="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739454401/RI_5_tbi2b2.jpg" alt="Roof Inspection Image">
+                </a>
+                <a href="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739454422/RI_6_f8jou1.jpg" data-lightbox="inspection" data-title="Roof Inspection Image 6">
+                    <img src="https://res.cloudinary.com/dzlmoyomq/image/upload/v1739454422/RI_6_f8jou1.jpg" alt="Roof Inspection Image">
+                </a>
+            </div>            
+
+            <!-- Inspection Report (Interactive) -->
+            <div class="inspection-report">
+                <h3>Inspection Summary</h3>
+                <p><strong>Property Address:</strong> 19210 Huebner Rd.</p>
+                <p><strong>Inspection Date:</strong> 12/02/2025</p>
+                <p><strong>Condition:</strong> Fair</p>
+                <p>The roof is in <strong>fair condition</strong> with visible signs of wear and aging. Minor damage and discoloration are present, but no immediate structural concerns exist. Regular maintenance is recommended.</p>
+                
+                <h4>Key Observations:</h4>
+                <ul>
+                    <li>Roof tiles appear intact but have some discoloration.</li>
+                    <li>Minor wear and tear around vents and chimneys.</li>
+                    <li>No major leaks detected.</li>
+                    <li>Debris buildup along roof valleys—needs clearing.</li>
+                </ul>
+
+                <h4>Recommendations:</h4>
+                <ul>
+                    <li>Routine maintenance to prevent deterioration.</li>
+                    <li>Monitor discolored areas for worsening conditions.</li>
+                    <li>Consult a roofing expert if issues persist.</li>
+                </ul>
+
+                <p><strong>Pilot:</strong> Jerome Sterling</p>
+                <p><strong>Contact:</strong> 832-918-7171</p>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section id="video-gallery">
+
+            <div class="video-gallery">
+                <div class="video-item events gallery-item">
+                    <h3>Press Coffee - Farmers Market Promotional Content</h3>
+                    <iframe src="https://www.youtube.com/embed/Kn4Il4G_K9Y" allowfullscreen></iframe>
                 </div>
-                <h2>Check out our latest drone videos!</h2>
-                <div class="video-container">
-                    <!-- YouTube Video Section -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kn4Il4G_K9Y?si=kzdNoSN_IeyucA0M" title="Press Coffee Drone Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-item misc gallery-item">
+                    <h3>Indoor FPV Drone Flying (Miscellaneous)</h3>
+                    <iframe src="https://www.youtube.com/embed/KwKudxExlQw" allowfullscreen></iframe>
                 </div>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KwKudxExlQw?si=mJNqCbT9S6poU0vg" title="SterFlies Indoor Flying Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-item real-estate construction gallery-item">
+                    <h3>New Home Construction Aerial View</h3>
+                    <iframe src="https://www.youtube.com/embed/2MaRlsLcMck" allowfullscreen></iframe>
                 </div>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2MaRlsLcMck?si=05p8_PwCL04kVyEa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </section>
-            
-            <footer>
-                <p>&copy; 2024 SterFlies</p>
-            </footer>
-            
-            <script src="scripts.js"></script>
-            <script src="lightbox-plus-jquery.js"></script>
-            
-    
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SterFlies</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" defer></script>
+    <script src="scripts.js" defer></script>
+
 </body>
 </html>
