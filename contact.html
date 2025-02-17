@@ -80,22 +80,6 @@
 <!-- Google reCAPTCHA Script -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<!-- Hidden input to store reCAPTCHA token -->
-<input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
-<script src="https://www.google.com/recaptcha/api.js?render=6Le8WtoqAAAAAIzV86NYlsDYNddDZxRlx_smUrR4"></script>
-<script>
-    document.getElementById('contact-form').addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form from submitting immediately
-
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6Le8WtoqAAAAAIzV86NYlsDYNddDZxRlx_smUrR4', { action: 'submit' }).then(function(token) {
-                document.getElementById('recaptchaResponse').value = token;
-                document.getElementById('contact-form').submit(); // Submit after adding the token
-            });
-        });
-    });
-</script>
-
             <!-- Mailchimp Signup Section -->
             <section id="subscribe">
                 <h2>Stay Updated with SterFlies</h2>
