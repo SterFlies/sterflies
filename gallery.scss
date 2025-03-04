@@ -1,0 +1,170 @@
+/* === FIXED GALLERY SECTION === */
+
+/* Gallery Grid Layout */
+.gallery-grid, .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Fix Images Stretching */
+  .gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image Sizing */
+  .gallery-item img,
+  .inspection-images img {
+    width: 100%;
+    max-width: 300px; /* Ensures images don't grow too large */
+    max-height: 250px; /* Keeps a uniform height */
+    height: auto;
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 8px;
+  }
+  
+  /* Hover Effect for Gallery Images */
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Video Gallery */
+  .video-gallery {
+    display: grid; /* Changed from flex to grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Matches images */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Video Items */
+  .video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Fix Video Sizing to Match Images */
+  .video-item iframe {
+    width: 100%;
+    max-width: 100%; /* Ensures videos don’t stretch beyond container */
+    height: 250px; /* Matches image height */
+    border-radius: 8px;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: darkblue;
+  }
+  
+  /* Lightbox Fix */
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+  }
+  
+  /* Responsive Fixes for Gallery */
+  @media (max-width: 768px) {
+    .gallery-grid, .video-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts for smaller screens */
+    }
+    
+    .gallery-item img {
+      height: auto; /* Prevents distortion */
+    }
+    
+    .video-item iframe {
+      height: 200px; /* Adjusts video height for smaller screens */
+    }
+  }
+  
+  /* Inspection Gallery Section (Hidden by Default) */
+  .inspection-gallery {
+    display: none;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for Inspection Images */
+  .inspection-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .inspection-images a {
+    display: block;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .inspection-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Hover effect for Inspection Images */
+  .inspection-images a:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Interactive Inspection Report */
+  .inspection-report {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inspection-report h3,
+  .inspection-report h4 {
+    color: #0056b3;
+  }
+  
+  .inspection-report ul {
+    list-style: disc;
+    padding-left: 20px;
+  }

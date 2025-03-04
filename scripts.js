@@ -1,52 +1,61 @@
-document.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('[data-speed]');
-
-    parallaxElements.forEach(function(element) {
+(function() {
+    // Debounce function: limits how often the function runs.
+    const debounce = (func, delay) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+      };
+    };
+  
+    // Parallax Effect on Scroll
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('[data-speed]');
+      parallaxElements.forEach(element => {
         const speed = element.getAttribute('data-speed');
         const yPos = -(scrolled * speed / 5);
         element.style.transform = `translateY(${yPos}px)`;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    let filterButtons = document.querySelectorAll(".filter-btn");
-    let galleryItems = document.querySelectorAll(".gallery-item, .video-item");
-    let inspectionSection = document.getElementById("inspection-gallery");
-
-    // Hide the inspections section initially
-    inspectionSection.style.display = "none";
-
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            let category = this.getAttribute("data-filter");
-
-            // Loop through all gallery items (both images and videos)
-            galleryItems.forEach(item => {
-                let itemCategories = item.className.split(" "); // Get all assigned categories
-
-                if (category === "all" || itemCategories.includes(category)) {
-                    item.style.display = "flex"; // Keep items aligned in grid
-                } else {
-                    item.style.display = "none"; // Hide everything not selected
-                }
-            });
-
-            // Toggle the inspections section visibility
-            if (category === "inspections") {
-                inspectionSection.style.display = "block"; // Show when selected
+      });
+    };
+  
+    document.addEventListener('scroll', debounce(handleScroll, 10));
+  
+    // DOMContentLoaded for gallery filtering functionality
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item, .video-item");
+      const inspectionSection = document.getElementById("inspection-gallery");
+  
+      // Hide the inspections section initially
+      inspectionSection.style.display = "none";
+  
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const category = button.getAttribute("data-filter");
+  
+          // Loop through gallery items to filter by category
+          galleryItems.forEach(item => {
+            const itemCategories = item.className.split(" ");
+            if (category === "all" || itemCategories.includes(category)) {
+              item.style.display = "flex";
             } else {
-                inspectionSection.style.display = "none"; // Hide when another category is selected
+              item.style.display = "none";
             }
+          });
+  
+          // Toggle the inspections section visibility
+          inspectionSection.style.display = (category === "inspections") ? "block" : "none";
         });
+      });
     });
-});
-
-// Lightbox Configuration
-lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true,
-    'alwaysShowNavOnTouchDevices': true
-});
+  
+    // Lightbox Configuration
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true
+    });
+  })();  
 
 
