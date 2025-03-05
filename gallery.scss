@@ -168,3 +168,9 @@
     list-style: disc;
     padding-left: 20px;
   }
+
+  /* Hidden Rule Element to Fix Input Lag*/
+  .hidden {
+    display: none !important;
+  }
+  

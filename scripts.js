@@ -33,14 +33,12 @@
       filterButtons.forEach(button => {
         button.addEventListener("click", () => {
           const category = button.getAttribute("data-filter");
-  
-          // Loop through gallery items to filter by category
+      
           galleryItems.forEach(item => {
-            const itemCategories = item.className.split(" ");
-            if (category === "all" || itemCategories.includes(category)) {
-              item.style.display = "flex";
+            if (category === "all" || item.classList.contains(category)) {
+              item.classList.remove("hidden");
             } else {
-              item.style.display = "none";
+              item.classList.add("hidden");
             }
           });
   
@@ -56,6 +54,4 @@
       'wrapAround': true,
       'alwaysShowNavOnTouchDevices': true
     });
-  })();  
-
-
+  })();
